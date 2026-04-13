@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f14;
+  color: #e6edf3;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #121821;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.topnav {
+  display: flex;
+  gap: 16px;
+}
+
+.topnav a {
+  opacity: 0.9;
+}
+
+.topnav a:hover {
+  opacity: 1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px 32px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.hero p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #b7c2cc;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #121821;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.btn:hover,
+.panel:hover {
+  box-shadow: 0 0 14px rgba(0, 150, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.section-title {
+  margin: 0 0 14px;
+  font-size: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.panel {
+  display: block;
+  background: #121821;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px;
+  transition: 0.2s ease;
+}
+
+.panel h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.panel p {
+  margin: 0;
+  color: #b7c2cc;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  margin-top: 0;
+  color: #b7c2cc;
+}
+
+.content-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.content-block {
+  background: #121821;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.content-block h2,
+.content-block h3 {
+  margin-top: 0;
+}
+
+ul {
+  margin-bottom: 0;
+}

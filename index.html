@@ -3,19 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Site</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.5;
-    }
-  </style>
+  <title>Game Guide</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello world</h1>
-  <p>GitHub Pages.</p>
+  <header class="topbar">
+    <div class="brand">Game Guide</div>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Guide & Strategy Hub</h1>
+      <p>Combat power, events, and progression in one place.</p>
+      <div class="hero-actions">
+        <a class="btn" href="heroes.html">Start with Heroes</a>
+        <a class="btn" href="events.html">Browse Events</a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Core Power</h2>
+      <div class="grid">
+        <a class="panel" href="heroes.html">
+          <h3>Heroes</h3>
+          <p>Hero roles, upgrades, priorities, and team value.</p>
+        </a>
+
+        <a class="panel" href="gear.html">
+          <h3>Gear</h3>
+          <p>Gear tiers, optimization, upgrades, and tradeoffs.</p>
+        </a>
+
+        <a class="panel" href="research.html">
+          <h3>Research</h3>
+          <p>Research paths, priorities, and power efficiency.</p>
+        </a>
+
+        <a class="panel" href="tank.html">
+          <h3>Tank</h3>
+          <p>Tank growth, parts, strengths, and combat impact.</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Events</h2>
+      <div class="grid">
+        <a class="panel" href="daily-events.html">
+          <h3>Daily / Recurring</h3>
+          <p>Daily Event Calendar, Hot Events, and routine planning.</p>
+        </a>
+
+        <a class="panel" href="competitive-events.html">
+          <h3>Competitive</h3>
+          <p>Alliance Duel, State Ruler, and Championship Duel.</p>
+        </a>
+
+        <a class="panel" href="seasonal-events.html">
+          <h3>Seasonal</h3>
+          <p>Season 2 events and longer-cycle strategy.</p>
+        </a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
