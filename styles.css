@@ -155,3 +155,44 @@ a {
 ul {
   margin-bottom: 0;
 }
+
+.levels-table-wrap {
+  margin-top: 16px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.levels-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.levels-table th,
+.levels-table td {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.levels-table th {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.levels-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table-data-link {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #b7c2cc;
+}
+
+.table-data-link a {
+  color: #7cc8ff;
+  text-decoration: underline;
+}
