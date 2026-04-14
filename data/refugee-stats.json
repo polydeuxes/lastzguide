@@ -6,112 +6,208 @@
       "job": "Diplomat",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value.",
-      "upgradeNotes": "Highest priority upgrade target. Upgrade Purple and Gold versions first."
+      "upgradeNotes": "Highest priority upgrade target. Upgrade Purple and Gold versions first.",
+      "qualityBuffs": {
+        "Green": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value. (entry tier impact).",
+        "Blue": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value. (improved over Green).",
+        "Purple": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value. (high impact tier; upgradable).",
+        "Gold": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Nurse",
       "job": "Nurse",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Hospital/healing support buff scales by quality tier.",
-      "upgradeNotes": "Second priority after Diplomat. Upgrade Purple and Gold only."
+      "upgradeNotes": "Second priority after Diplomat. Upgrade Purple and Gold only.",
+      "qualityBuffs": {
+        "Green": "Hospital/healing support buff scales by quality tier. (entry tier impact).",
+        "Blue": "Hospital/healing support buff scales by quality tier. (improved over Green).",
+        "Purple": "Hospital/healing support buff scales by quality tier. (high impact tier; upgradable).",
+        "Gold": "Hospital/healing support buff scales by quality tier. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Officer",
       "job": "Officer",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Military/training support buff scales by quality tier.",
-      "upgradeNotes": "Third priority after Diplomat and Nurse. Upgrade Purple and Gold only."
+      "upgradeNotes": "Third priority after Diplomat and Nurse. Upgrade Purple and Gold only.",
+      "qualityBuffs": {
+        "Green": "Military/training support buff scales by quality tier. (entry tier impact).",
+        "Blue": "Military/training support buff scales by quality tier. (improved over Green).",
+        "Purple": "Military/training support buff scales by quality tier. (high impact tier; upgradable).",
+        "Gold": "Military/training support buff scales by quality tier. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Butler",
       "job": "Butler",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star).",
-      "upgradeNotes": "Collect, but do not upgrade under current resource plan."
+      "upgradeNotes": "Collect, but do not upgrade under current resource plan.",
+      "qualityBuffs": {
+        "Green": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star). (entry tier impact).",
+        "Blue": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star). (improved over Green).",
+        "Purple": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star). (high impact tier; upgradable).",
+        "Gold": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star). (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Scientist",
       "job": "Scientist",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Research-related support buff scales with quality.",
-      "upgradeNotes": "Collect, but do not upgrade under current resource plan."
+      "upgradeNotes": "Collect, but do not upgrade under current resource plan.",
+      "qualityBuffs": {
+        "Green": "Research-related support buff scales with quality. (entry tier impact).",
+        "Blue": "Research-related support buff scales with quality. (improved over Green).",
+        "Purple": "Research-related support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Research-related support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Shooter Instructor",
       "job": "Instructor",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Shooter training support buff scales with quality.",
-      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan."
+      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan.",
+      "qualityBuffs": {
+        "Green": "Shooter training support buff scales with quality. (entry tier impact).",
+        "Blue": "Shooter training support buff scales with quality. (improved over Green).",
+        "Purple": "Shooter training support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Shooter training support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Assaulter Instructor",
       "job": "Instructor",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Assaulter training support buff scales with quality.",
-      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan."
+      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan.",
+      "qualityBuffs": {
+        "Green": "Assaulter training support buff scales with quality. (entry tier impact).",
+        "Blue": "Assaulter training support buff scales with quality. (improved over Green).",
+        "Purple": "Assaulter training support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Assaulter training support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Rider Instructor",
       "job": "Instructor",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Rider training support buff scales with quality.",
-      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan."
+      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan.",
+      "qualityBuffs": {
+        "Green": "Rider training support buff scales with quality. (entry tier impact).",
+        "Blue": "Rider training support buff scales with quality. (improved over Green).",
+        "Purple": "Rider training support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Rider training support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Metallurgist",
       "job": "Production",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Metal production/support buff scales with quality.",
-      "upgradeNotes": "Lower priority. Avoid upgrades while core priorities are unfinished."
+      "upgradeNotes": "Lower priority. Avoid upgrades while core priorities are unfinished.",
+      "qualityBuffs": {
+        "Green": "Metal production/support buff scales with quality. (entry tier impact).",
+        "Blue": "Metal production/support buff scales with quality. (improved over Green).",
+        "Purple": "Metal production/support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Metal production/support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Community Manager",
       "job": "Support",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "General support buff scales with quality.",
-      "upgradeNotes": "Lower priority."
+      "upgradeNotes": "Lower priority.",
+      "qualityBuffs": {
+        "Green": "General support buff scales with quality. (entry tier impact).",
+        "Blue": "General support buff scales with quality. (improved over Green).",
+        "Purple": "General support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "General support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Farmer",
       "job": "Production",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Food production/support buff scales with quality.",
-      "upgradeNotes": "Lower priority."
+      "upgradeNotes": "Lower priority.",
+      "qualityBuffs": {
+        "Green": "Food production/support buff scales with quality. (entry tier impact).",
+        "Blue": "Food production/support buff scales with quality. (improved over Green).",
+        "Purple": "Food production/support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Food production/support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Lumberjack",
       "job": "Production",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Wood production/support buff scales with quality.",
-      "upgradeNotes": "Lower priority."
+      "upgradeNotes": "Lower priority.",
+      "qualityBuffs": {
+        "Green": "Wood production/support buff scales with quality. (entry tier impact).",
+        "Blue": "Wood production/support buff scales with quality. (improved over Green).",
+        "Purple": "Wood production/support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Wood production/support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Warehouse Keeper",
       "job": "Storage",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Storage/protection buff scales with quality.",
-      "upgradeNotes": "Lower priority."
+      "upgradeNotes": "Lower priority.",
+      "qualityBuffs": {
+        "Green": "Storage/protection buff scales with quality. (entry tier impact).",
+        "Blue": "Storage/protection buff scales with quality. (improved over Green).",
+        "Purple": "Storage/protection buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Storage/protection buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Mechanic",
       "job": "Support",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Mechanical/maintenance support buff scales with quality.",
-      "upgradeNotes": "Lower priority."
+      "upgradeNotes": "Lower priority.",
+      "qualityBuffs": {
+        "Green": "Mechanical/maintenance support buff scales with quality. (entry tier impact).",
+        "Blue": "Mechanical/maintenance support buff scales with quality. (improved over Green).",
+        "Purple": "Mechanical/maintenance support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Mechanical/maintenance support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Merchant",
       "job": "Trade",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Trade/economy support buff scales with quality.",
-      "upgradeNotes": "Lower priority."
+      "upgradeNotes": "Lower priority.",
+      "qualityBuffs": {
+        "Green": "Trade/economy support buff scales with quality. (entry tier impact).",
+        "Blue": "Trade/economy support buff scales with quality. (improved over Green).",
+        "Purple": "Trade/economy support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Trade/economy support buff scales with quality. (best impact tier; upgradable)."
+      }
     },
     {
       "name": "Stamina Trainer",
       "job": "Support",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Stamina-related support buff scales with quality.",
-      "upgradeNotes": "Lower priority."
+      "upgradeNotes": "Lower priority.",
+      "qualityBuffs": {
+        "Green": "Stamina-related support buff scales with quality. (entry tier impact).",
+        "Blue": "Stamina-related support buff scales with quality. (improved over Green).",
+        "Purple": "Stamina-related support buff scales with quality. (high impact tier; upgradable).",
+        "Gold": "Stamina-related support buff scales with quality. (best impact tier; upgradable)."
+      }
     }
   ]
 }
