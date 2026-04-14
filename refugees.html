@@ -19,11 +19,67 @@
   <main class="container">
     <section class="page-header">
       <h1>Refugees & Recruitment</h1>
-      <p>Refugees are support units you can recruit through the Refugee Card system. Each run shows 3 refugees with different jobs and qualities. Knowing when to recruit, when to reroll, and how weighted odds work helps you spend tickets efficiently.</p>
+      <p>Refugees are building-buff units. Focus on collecting the best jobs and only investing upgrade resources where they provide the most value.</p>
+    </section>
+
+    <section class="content-block tips-box">
+      <h2>Priority Plan (Use This First)</h2>
+      <ul>
+        <li><strong>Top jobs to collect:</strong> Diplomats, Nurses, Officers, Butlers, Scientists, and all three Instructors (Shooter, Assaulter, Rider).</li>
+        <li><strong>Upgrade priority:</strong> Diplomats first, then Nurses, then Officers.</li>
+        <li><strong>Do not upgrade:</strong> Butlers, Scientists, or Instructors. Collect them for buffs, but save upgrade points for the top 3 above.</li>
+        <li><strong>Quality upgrade rule:</strong> only <strong>Purple</strong> and <strong>Gold</strong> refugees can be upgraded.</li>
+      </ul>
+
+      <h3>Gold Butler Upgrade Reference</h3>
+      <ul>
+        <li><strong>Base buff:</strong> Construction Speed +25%.</li>
+        <li><strong>Star system:</strong> 5 stars total, each star has 5 chips.</li>
+        <li><strong>Per chip:</strong> +18s free speedup duration.</li>
+        <li><strong>Per completed star bonus:</strong> +90s additional free speedup duration.</li>
+        <li><strong>Star 1 chip cost:</strong> 5 gold refugee upgrade points + 30 green points per chip.</li>
+        <li><strong>Star 2 chip cost:</strong> 10 gold refugee upgrade points + ~60 green points per chip (to verify in-game).</li>
+      </ul>
     </section>
 
     <section class="content-block">
-      <h2>Recruit Costs</h2>
+      <h2>Refugee Jobs & Buff Table</h2>
+
+      <div class="table-controls">
+        <label>
+          Search
+          <input id="refugee-search" type="search" placeholder="Search refugee, job, or buff">
+        </label>
+        <label>
+          Job filter
+          <select id="job-filter">
+            <option value="all">All jobs</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="table-scroll">
+        <table class="levels-table" id="refugee-table">
+          <thead>
+            <tr>
+              <th><button class="sort-btn" data-sort-key="name" type="button">Refugee</button></th>
+              <th><button class="sort-btn" data-sort-key="job" type="button">Job</button></th>
+              <th><button class="sort-btn" data-sort-key="quality" type="button">Qualities</button></th>
+              <th><button class="sort-btn" data-sort-key="buffByQuality" type="button">Buff by Quality</button></th>
+              <th><button class="sort-btn" data-sort-key="upgradeNotes" type="button">Upgrade Notes</button></th>
+            </tr>
+          </thead>
+          <tbody id="refugee-table-body">
+            <tr><td colspan="5">Loading refugee data...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <h2>Recruitment Information</h2>
+
+      <h3>Recruit Costs</h3>
       <div class="table-scroll">
         <table class="levels-table">
           <thead>
@@ -43,12 +99,10 @@
       <ul>
         <li>The first refresh after your first recruit is free.</li>
         <li>Refresh is also free after 12 hours or at daily reset (midnight).</li>
-        <li>Pity guarantees an Orange appears after 10 recruitments.</li>
+        <li>Pity guarantees a Gold/Orange appears after 10 recruitments.</li>
       </ul>
-    </section>
 
-    <section class="content-block">
-      <h2>Quality Rates</h2>
+      <h3>Quality Rates</h3>
       <div class="table-scroll">
         <table class="levels-table">
           <thead>
@@ -58,101 +112,30 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td><span class="rarity-badge rarity-orange">Orange</span></td><td>6.7357%</td></tr>
+            <tr><td><span class="rarity-badge rarity-orange">Gold / Orange</span></td><td>6.7357%</td></tr>
             <tr><td><span class="rarity-badge rarity-purple">Purple</span></td><td>20.2073%</td></tr>
             <tr><td><span class="rarity-badge rarity-blue">Blue</span></td><td>33.6788%</td></tr>
             <tr><td><span class="rarity-badge rarity-green">Green</span></td><td>39.3782%</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Orange and Purple are usually the main target qualities. Combined, they make up <strong>26.943%</strong> of possible refugee rolls.</p>
-    </section>
+      <p>Gold/Orange and Purple combined = <strong>26.943%</strong> of rolls.</p>
 
-    <section class="content-block">
-      <h2>How Weighted Recruiting Works</h2>
+      <h3>How Weighted Recruiting Works</h3>
       <ul>
         <li>Each run shows 3 refugees.</li>
-        <li>Recruiting is not flat once they are shown.</li>
-        <li>The game picks from the currently shown, unrecruited refugees using weights.</li>
-      </ul>
-      <p><strong>Chance to recruit a shown refugee = that refugee's weight / total weight of all unrecruited refugees shown.</strong></p>
-      <ul>
-        <li>Orange / S = weight 1</li>
-        <li>Purple / Blue / Green = weight 2</li>
-      </ul>
-      <p>Because Orange has lower weight than other qualities, it is naturally harder to pull on a fresh board unless weaker options have already been removed.</p>
-    </section>
-
-    <section class="content-block">
-      <h2>Strategy for Targeting Orange/Purple</h2>
-      <ul>
-        <li>If a board shows no Orange/Purple, reroll.</li>
-        <li>If a board shows Orange/Purple, the 500-ticket first recruit is usually worth taking.</li>
-        <li>If the first recruit misses, do not automatically buy the 2000 second recruit.</li>
-        <li>Main exception: buy the second recruit when both remaining refugees are desirable.</li>
-      </ul>
-    </section>
-
-    <section class="content-block">
-      <h2>Example Boards</h2>
-      <h3>P / X / X</h3>
-      <ul>
-        <li>First recruit hits P: <strong>33.33%</strong>.</li>
-        <li>If first recruit misses: board becomes P / X.</li>
-        <li>Second recruit then has <strong>50%</strong> chance to hit P.</li>
-        <li>Buying the second recruit raises total success from <strong>33.33%</strong> to <strong>66.67%</strong>, but usually costs too much compared with rerolling.</li>
+        <li>Recruiting is weighted across currently shown, unrecruited refugees.</li>
+        <li><strong>Chance to recruit a shown refugee = that refugee's weight / total remaining weight.</strong></li>
+        <li>Gold/Orange = weight 1.</li>
+        <li>Purple / Blue / Green = weight 2.</li>
       </ul>
 
-      <h3>B / P / P</h3>
+      <h3>Board Decision Rules</h3>
       <ul>
-        <li>First recruit hits Purple: <strong>66.67%</strong>.</li>
-        <li>If first recruit misses and hits Blue: board becomes P / P.</li>
-        <li>Second recruit is then <strong>guaranteed Purple</strong>.</li>
-        <li>This is one of the few boards where paying 2000 for the second recruit is defensible.</li>
-      </ul>
-    </section>
-
-    <section class="content-block">
-      <h2>Refugee Jobs Table</h2>
-      <p class="table-data-link">Rendered from <a href="data/refugee-stats.json">data/refugee-stats.json</a>.</p>
-
-      <div class="table-controls">
-        <label>
-          Search
-          <input id="refugee-search" type="search" placeholder="Search refugee or job">
-        </label>
-        <label>
-          Job filter
-          <select id="job-filter">
-            <option value="all">All jobs</option>
-          </select>
-        </label>
-      </div>
-
-      <div class="table-scroll">
-        <table class="levels-table" id="refugee-table">
-          <thead>
-            <tr>
-              <th><button class="sort-btn" data-sort-key="name" type="button">Refugee</button></th>
-              <th><button class="sort-btn" data-sort-key="job" type="button">Job</button></th>
-              <th><button class="sort-btn" data-sort-key="quality" type="button">Quality</button></th>
-              <th><button class="sort-btn" data-sort-key="notes" type="button">Notes</button></th>
-            </tr>
-          </thead>
-          <tbody id="refugee-table-body">
-            <tr><td colspan="4">Loading refugee data...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="content-block tips-box">
-      <h2>Quick Tips</h2>
-      <ul>
-        <li>Recruit when Orange/Purple is shown.</li>
-        <li>Do not blindly buy the second recruit.</li>
-        <li>The second recruit is strongest when both remaining refugees are desirable.</li>
-        <li>Save tickets by planning around free refresh timing.</li>
+        <li>If a board shows no Gold/Orange or Purple, reroll.</li>
+        <li>If a board shows Gold/Orange or Purple, the 500-ticket first recruit is usually worth taking.</li>
+        <li>Do not auto-buy the 2000-ticket second recruit.</li>
+        <li>Exception: buy second recruit when both remaining refugees are desirable.</li>
       </ul>
     </section>
   </main>

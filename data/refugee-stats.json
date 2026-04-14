@@ -2,68 +2,116 @@
   "updated": "2026-04-14",
   "refugees": [
     {
-      "name": "Diplomats",
-      "statistics": {}
-    },
-    {
-      "name": "Butlers",
-      "statistics": {}
-    },
-    {
-      "name": "Scientists",
-      "statistics": {}
-    },
-    {
-      "name": "Metallurgist",
-      "statistics": {}
-    },
-    {
-      "name": "Community Manager",
-      "statistics": {}
+      "name": "Diplomat",
+      "job": "Diplomat",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value.",
+      "upgradeNotes": "Highest priority upgrade target. Upgrade Purple and Gold versions first."
     },
     {
       "name": "Nurse",
-      "statistics": {}
-    },
-    {
-      "name": "Farmer",
-      "statistics": {}
-    },
-    {
-      "name": "Lumberjack",
-      "statistics": {}
-    },
-    {
-      "name": "Shooter Instructor",
-      "statistics": {}
-    },
-    {
-      "name": "Assaulter Instructor",
-      "statistics": {}
-    },
-    {
-      "name": "Rider Instructor",
-      "statistics": {}
-    },
-    {
-      "name": "Warehouse Keeper",
-      "statistics": {}
-    },
-    {
-      "name": "Mechanic",
-      "statistics": {}
-    },
-    {
-      "name": "Merchant",
-      "statistics": {}
-    },
-    {
-      "name": "Stamina Trainer",
-      "statistics": {}
+      "job": "Nurse",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Hospital/healing support buff scales by quality tier.",
+      "upgradeNotes": "Second priority after Diplomat. Upgrade Purple and Gold only."
     },
     {
       "name": "Officer",
-      "statistics": {}
+      "job": "Officer",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Military/training support buff scales by quality tier.",
+      "upgradeNotes": "Third priority after Diplomat and Nurse. Upgrade Purple and Gold only."
+    },
+    {
+      "name": "Butler",
+      "job": "Butler",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star).",
+      "upgradeNotes": "Collect, but do not upgrade under current resource plan."
+    },
+    {
+      "name": "Scientist",
+      "job": "Scientist",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Research-related support buff scales with quality.",
+      "upgradeNotes": "Collect, but do not upgrade under current resource plan."
+    },
+    {
+      "name": "Shooter Instructor",
+      "job": "Instructor",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Shooter training support buff scales with quality.",
+      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan."
+    },
+    {
+      "name": "Assaulter Instructor",
+      "job": "Instructor",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Assaulter training support buff scales with quality.",
+      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan."
+    },
+    {
+      "name": "Rider Instructor",
+      "job": "Instructor",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Rider training support buff scales with quality.",
+      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan."
+    },
+    {
+      "name": "Metallurgist",
+      "job": "Production",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Metal production/support buff scales with quality.",
+      "upgradeNotes": "Lower priority. Avoid upgrades while core priorities are unfinished."
+    },
+    {
+      "name": "Community Manager",
+      "job": "Support",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "General support buff scales with quality.",
+      "upgradeNotes": "Lower priority."
+    },
+    {
+      "name": "Farmer",
+      "job": "Production",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Food production/support buff scales with quality.",
+      "upgradeNotes": "Lower priority."
+    },
+    {
+      "name": "Lumberjack",
+      "job": "Production",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Wood production/support buff scales with quality.",
+      "upgradeNotes": "Lower priority."
+    },
+    {
+      "name": "Warehouse Keeper",
+      "job": "Storage",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Storage/protection buff scales with quality.",
+      "upgradeNotes": "Lower priority."
+    },
+    {
+      "name": "Mechanic",
+      "job": "Support",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Mechanical/maintenance support buff scales with quality.",
+      "upgradeNotes": "Lower priority."
+    },
+    {
+      "name": "Merchant",
+      "job": "Trade",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Trade/economy support buff scales with quality.",
+      "upgradeNotes": "Lower priority."
+    },
+    {
+      "name": "Stamina Trainer",
+      "job": "Support",
+      "quality": "Green / Blue / Purple / Gold",
+      "buffByQuality": "Stamina-related support buff scales with quality.",
+      "upgradeNotes": "Lower priority."
     }
   ]
 }
