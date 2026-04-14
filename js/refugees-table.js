@@ -8,18 +8,48 @@
     return;
   }
 
+  const qualityOrder = ['Green', 'Blue', 'Purple', 'Gold'];
+  const qualityRank = qualityOrder.reduce((acc, quality, index) => {
+    acc[quality.toLowerCase()] = index;
+    return acc;
+  }, {});
+
   let refugees = [];
   let sortKey = 'name';
   let sortAsc = true;
 
+  function defaultQualityBuffs(buffText) {
+    return {
+      Green: `${buffText} (entry tier impact).`,
+      Blue: `${buffText} (improved over Green).`,
+      Purple: `${buffText} (high impact tier; upgradable).`,
+      Gold: `${buffText} (best impact tier; upgradable).`
+    };
+  }
+
   function normalizeRefugee(item) {
     const name = String(item.name || item.refugee || item.job || 'Unknown').trim();
     const job = String(item.job || item.role || item.name || 'Unknown').trim();
-    const quality = String(item.quality || item.qualities || 'Green, Blue, Purple, Gold').trim();
     const buffByQuality = String(item.buffByQuality || item.buff || item.statistics?.buffByQuality || 'See in-game details by quality.').trim();
     const upgradeNotes = String(item.upgradeNotes || item.notes || item.statistics?.notes || 'Only Purple and Gold are upgradable.').trim();
+    const qualityBuffs = item.qualityBuffs && typeof item.qualityBuffs === 'object'
+      ? item.qualityBuffs
+      : defaultQualityBuffs(buffByQuality);
 
-    return { name, job, quality, buffByQuality, upgradeNotes };
+    return { name, job, upgradeNotes, qualityBuffs };
+  }
+
+  function explodeQualityRows(refugeeRows) {
+    return refugeeRows.flatMap((row) => qualityOrder
+      .filter((quality) => row.qualityBuffs[quality])
+      .map((quality) => ({
+        name: row.name,
+        job: row.job,
+        quality,
+        qualityRank: qualityRank[quality.toLowerCase()] ?? 999,
+        buffByQuality: String(row.qualityBuffs[quality]).trim(),
+        upgradeNotes: row.upgradeNotes
+      })));
   }
 
   function renderRows(rows) {
@@ -28,16 +58,25 @@
       return;
     }
 
-    tableBody.innerHTML = rows
-      .map((row) => `
+    const grouped = rows.reduce((acc, row) => {
+      const groupKey = `${row.name}::${row.job}`;
+      if (!acc[groupKey]) {
+        acc[groupKey] = [];
+      }
+      acc[groupKey].push(row);
+      return acc;
+    }, {});
+
+    tableBody.innerHTML = Object.values(grouped)
+      .map((group) => group.map((row, index) => `
         <tr>
-          <td>${row.name}</td>
-          <td>${row.job}</td>
+          ${index === 0 ? `<td rowspan="${group.length}">${row.name}</td>` : ''}
+          ${index === 0 ? `<td rowspan="${group.length}">${row.job}</td>` : ''}
           <td>${row.quality}</td>
           <td>${row.buffByQuality}</td>
-          <td>${row.upgradeNotes}</td>
+          ${index === 0 ? `<td rowspan="${group.length}">${row.upgradeNotes}</td>` : ''}
         </tr>
-      `)
+      `).join(''))
       .join('');
   }
 
@@ -65,8 +104,13 @@
     });
 
     filtered.sort((a, b) => {
-      const left = a[sortKey].toLowerCase();
-      const right = b[sortKey].toLowerCase();
+      if (sortKey === 'quality') {
+        const compare = a.qualityRank - b.qualityRank;
+        return sortAsc ? compare : -compare;
+      }
+
+      const left = String(a[sortKey] || '').toLowerCase();
+      const right = String(b[sortKey] || '').toLowerCase();
       const compare = left.localeCompare(right);
       return sortAsc ? compare : -compare;
     });
@@ -102,7 +146,8 @@
   try {
     const response = await fetch('data/refugee-stats.json');
     const data = await response.json();
-    refugees = Array.isArray(data.refugees) ? data.refugees.map(normalizeRefugee) : [];
+    const normalized = Array.isArray(data.refugees) ? data.refugees.map(normalizeRefugee) : [];
+    refugees = explodeQualityRows(normalized);
 
     updateJobFilterOptions(refugees);
     render();
