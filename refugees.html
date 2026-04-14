@@ -19,25 +19,29 @@
   <main class="container">
     <section class="page-header">
       <h1>Refugees & Recruitment</h1>
-      <p>Refugees are building-buff units. Focus on collecting the best jobs and only investing upgrade resources where they provide the most value.</p>
+      <p>Refugees provide passive buffs to your account. Every refugee has a <strong>base perk</strong>, and Purple/Gold refugees also unlock an <strong>upgradable perk</strong>. The goal is to recruit the useful jobs, then spend upgrade resources only where they give the best return.</p>
     </section>
 
     <section class="content-block tips-box">
-      <h2>Priority Plan (Use This First)</h2>
-      <p>Recruit broadly for core utility jobs: <strong>Diplomat</strong>, <strong>Nurse</strong>, <strong>Officer</strong>, <strong>Butler</strong>, <strong>Scientist</strong>, and all three <strong>Instructors</strong> (Shooter, Assaulter, Rider). For upgrade spending, keep the order tight: <strong>Diplomat first</strong>, <strong>Nurse second</strong>, <strong>Officer third</strong>.</p>
-      <p>Only <strong>Purple</strong> and <strong>Gold</strong> refugees can be upgraded. That means Butler/Scientist/Instructor units are still important to collect for their passive buffs, but they should not consume upgrade points until your core trio is in a strong spot.</p>
+      <h2>What to Prioritize</h2>
+      <p>Your main upgrade targets are <strong>Diplomat</strong>, <strong>Nurse</strong>, and <strong>Officer</strong>. If you are spending refugee resources, keep the order simple: <strong>Diplomat first</strong>, <strong>Nurse second</strong>, <strong>Officer third</strong>.</p>
 
-      <h3>Gold Butler Upgrade & Star System</h3>
-      <p>Gold Butler starts at <strong>Construction Speed +25%</strong>. Star promotion uses a 5-star track, and each star has 5 chips. Each chip adds <strong>+18s</strong> free speedup duration, and each completed star adds an extra <strong>+90s</strong> bonus. Early chip costs scale quickly: star 1 chips cost 5 gold refugee points + 30 green points each, while star 2 chips cost 10 gold refugee points + roughly 60 green points each (verify in your server version).</p>
+      <p>You should also recruit <strong>Butler</strong>, <strong>Scientist</strong>, and all three <strong>Instructors</strong> for their passive value, but they usually are not where your early upgrade points should go.</p>
+
+      <p><strong>Green</strong> and <strong>Blue</strong> refugees only provide their base perk. <strong>Purple</strong> and <strong>Gold</strong> refugees provide both a base perk and an upgradable perk, which is why higher-quality pulls matter so much more.</p>
+
+      <h3>Gold Butler Notes</h3>
+      <p>Gold Butler starts with <strong>Construction Speed +25%</strong>. Butler stars use a 5-star track with 5 chips per star. Each chip adds <strong>+18s</strong> of free speedup time, and each completed star adds another <strong>+90s</strong>. The value is nice, but the cost ramps quickly, so Butler is usually better treated as a secondary upgrade after your core priorities are handled.</p>
     </section>
 
     <section class="content-block">
-      <h2>Refugee Jobs & Buff Table</h2>
+      <h2>Refugee Jobs & Perks</h2>
+      <p>Each refugee has a job, a base perk, and in higher qualities an upgradable perk. <strong>Green</strong> and <strong>Blue</strong> only provide the base perk. <strong>Purple</strong> and <strong>Gold</strong> provide both. To keep the table readable, the quality breakdown should show each quality tag with its perk values beside it.</p>
 
       <div class="table-controls">
         <label>
           Search
-          <input id="refugee-search" type="search" placeholder="Search refugee, job, or buff">
+          <input id="refugee-search" type="search" placeholder="Search refugee, job, or perk">
         </label>
         <label>
           Job filter
@@ -53,13 +57,14 @@
             <tr>
               <th><button class="sort-btn" data-sort-key="name" type="button">Refugee</button></th>
               <th><button class="sort-btn" data-sort-key="job" type="button">Job</button></th>
-              <th><button class="sort-btn" data-sort-key="quality" type="button">Quality</button></th>
-              <th><button class="sort-btn" data-sort-key="buffByQuality" type="button">Buff at This Quality</button></th>
+              <th><button class="sort-btn" data-sort-key="basePerk" type="button">Base Perk</button></th>
+              <th><button class="sort-btn" data-sort-key="upgradePerk" type="button">Upgradable Perk</button></th>
+              <th><button class="sort-btn" data-sort-key="qualityBreakdown" type="button">Quality Breakdown</button></th>
               <th><button class="sort-btn" data-sort-key="upgradeNotes" type="button">Upgrade Guidance</button></th>
             </tr>
           </thead>
           <tbody id="refugee-table-body">
-            <tr><td colspan="5">Loading refugee data...</td></tr>
+            <tr><td colspan="6">Loading refugee data...</td></tr>
           </tbody>
         </table>
       </div>
@@ -67,6 +72,7 @@
 
     <section class="content-block">
       <h2>Recruitment Information</h2>
+      <p>Each recruitment board shows 3 refugees. You can recruit up to 3 times from that board, then refresh into a new one. The trick is knowing when a board is worth spending on and when it should be rerolled.</p>
 
       <h3>Recruit Costs</h3>
       <div class="table-scroll">
@@ -85,7 +91,7 @@
           </tbody>
         </table>
       </div>
-      <p>The first refresh after your first recruit is free. You also get a free refresh after 12 hours or at daily reset (midnight). The pity system guarantees at least one Gold/Orange appearance within 10 recruitments.</p>
+      <p>The first refresh after your first recruit is free. You also get a free refresh every 12 hours or at daily reset. There is also a pity mechanic that guarantees at least one <strong>Gold/Orange</strong> refugee within 10 recruitments.</p>
 
       <h3>Quality Rates</h3>
       <div class="table-scroll">
@@ -104,13 +110,16 @@
           </tbody>
         </table>
       </div>
-      <p>Gold/Orange and Purple combined = <strong>26.943%</strong> of rolls.</p>
+      <p><strong>Purple + Gold/Orange = 26.943%</strong> of total rolls.</p>
 
-      <h3>How Weighted Recruiting Works</h3>
-      <p>Each run shows 3 refugees. Recruiting odds are weighted across the currently shown and unrecruited options, using this rule: <strong>refugee weight / total remaining weight</strong>. Gold/Orange refugees have weight 1, while Purple, Blue, and Green refugees each have weight 2.</p>
+      <h3>How Recruiting Odds Work</h3>
+      <p>Recruiting odds are based on the refugees still left on the board. <strong>Gold/Orange</strong> refugees have weight <strong>1</strong>. <strong>Purple</strong>, <strong>Blue</strong>, and <strong>Green</strong> refugees each have weight <strong>2</strong>.</p>
+      <p>Your chance to pull a specific refugee is:</p>
+      <p><strong>that refugee's weight / total remaining weight</strong></p>
+      <p>That means Gold refugees are rarer overall, but once one appears on the board, your real pull chance depends on what is still left beside it.</p>
 
-      <h3>Board Decision Rules</h3>
-      <p>If a board has no Gold/Orange or Purple options, reroll. If it does show at least one Gold/Orange or Purple, the first 500-ticket recruit is usually efficient. Avoid auto-buying the 2000-ticket second recruit unless both remaining refugees are clearly useful for your plan.</p>
+      <h3>When to Recruit and When to Reroll</h3>
+      <p>If a board has no <strong>Gold/Orange</strong> or <strong>Purple</strong> refugee you care about, reroll it. If it has at least one strong target, the first <strong>500-ticket</strong> recruit is usually worth taking. The <strong>2000-ticket</strong> second recruit is much less efficient, so only buy it when both remaining options are still useful to you.</p>
     </section>
   </main>
 
