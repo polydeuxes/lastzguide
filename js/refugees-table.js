@@ -8,13 +8,6 @@
     return;
   }
 
-  const QUALITY_CLASS_MAP = {
-    orange: 'rarity-orange',
-    purple: 'rarity-purple',
-    blue: 'rarity-blue',
-    green: 'rarity-green'
-  };
-
   let refugees = [];
   let sortKey = 'name';
   let sortAsc = true;
@@ -22,27 +15,16 @@
   function normalizeRefugee(item) {
     const name = String(item.name || item.refugee || item.job || 'Unknown').trim();
     const job = String(item.job || item.role || item.name || 'Unknown').trim();
-    const qualitySource = item.quality || (item.statistics && item.statistics.quality) || '';
-    const quality = String(qualitySource || 'Unknown').trim();
-    const notesSource = item.notes || item.description || (item.statistics && item.statistics.notes) || '';
-    const notes = String(notesSource || '—').trim();
+    const quality = String(item.quality || item.qualities || 'Green, Blue, Purple, Gold').trim();
+    const buffByQuality = String(item.buffByQuality || item.buff || item.statistics?.buffByQuality || 'See in-game details by quality.').trim();
+    const upgradeNotes = String(item.upgradeNotes || item.notes || item.statistics?.notes || 'Only Purple and Gold are upgradable.').trim();
 
-    return { name, job, quality, notes };
-  }
-
-  function getQualityBadge(quality) {
-    const qualityKey = quality.toLowerCase();
-    const className = QUALITY_CLASS_MAP[qualityKey];
-    if (!className) {
-      return quality;
-    }
-
-    return `<span class="rarity-badge ${className}">${quality}</span>`;
+    return { name, job, quality, buffByQuality, upgradeNotes };
   }
 
   function renderRows(rows) {
     if (rows.length === 0) {
-      tableBody.innerHTML = '<tr><td colspan="4">No matching refugees.</td></tr>';
+      tableBody.innerHTML = '<tr><td colspan="5">No matching refugees.</td></tr>';
       return;
     }
 
@@ -51,8 +33,9 @@
         <tr>
           <td>${row.name}</td>
           <td>${row.job}</td>
-          <td>${getQualityBadge(row.quality)}</td>
-          <td>${row.notes}</td>
+          <td>${row.quality}</td>
+          <td>${row.buffByQuality}</td>
+          <td>${row.upgradeNotes}</td>
         </tr>
       `)
       .join('');
@@ -73,7 +56,8 @@
         || row.name.toLowerCase().includes(searchTerm)
         || row.job.toLowerCase().includes(searchTerm)
         || row.quality.toLowerCase().includes(searchTerm)
-        || row.notes.toLowerCase().includes(searchTerm);
+        || row.buffByQuality.toLowerCase().includes(searchTerm)
+        || row.upgradeNotes.toLowerCase().includes(searchTerm);
 
       const matchesJob = selectedJob === 'all' || row.job === selectedJob;
 
@@ -123,6 +107,6 @@
     updateJobFilterOptions(refugees);
     render();
   } catch (error) {
-    tableBody.innerHTML = '<tr><td colspan="4">Failed to load refugee data.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="5">Failed to load refugee data.</td></tr>';
   }
 })();
