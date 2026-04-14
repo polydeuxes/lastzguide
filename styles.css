@@ -196,3 +196,44 @@ ul {
   color: #7cc8ff;
   text-decoration: underline;
 }
+
+.rarity-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.rarity-orange {
+  background: rgba(255, 140, 0, 0.2);
+  color: #ffb56b;
+  border: 1px solid rgba(255, 140, 0, 0.45);
+}
+
+.rarity-purple {
+  background: rgba(140, 82, 255, 0.2);
+  color: #caa9ff;
+  border: 1px solid rgba(140, 82, 255, 0.45);
+}
+
+.rarity-blue {
+  background: rgba(48, 159, 255, 0.2);
+  color: #9ad2ff;
+  border: 1px solid rgba(48, 159, 255, 0.45);
+}
+
+.rarity-green {
+  background: rgba(70, 190, 120, 0.2);
+  color: #95ebb8;
+  border: 1px solid rgba(70, 190, 120, 0.45);
+}
+
+.recruit-results {
+  margin-top: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.recruit-card {
+  margin: 0;
+}

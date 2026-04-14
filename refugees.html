@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refugees - Game Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Game Guide</div>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="mini-games.html">Mini-Games</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Refugees & Recruitment</h1>
+      <p>Recruit up to three random refugees using ticket costs that increase each pick.</p>
+    </section>
+
+    <section class="content-block">
+      <h2>Recruitment Odds by Rarity</h2>
+      <ul>
+        <li><span class="rarity-badge rarity-orange">Orange</span> - 6.7357%</li>
+        <li><span class="rarity-badge rarity-purple">Purple</span> - 20.2073%</li>
+        <li><span class="rarity-badge rarity-blue">Blue</span> - 33.6788%</li>
+        <li><span class="rarity-badge rarity-green">Green</span> - 39.3782%</li>
+      </ul>
+      <p class="table-data-link">Refugee stats blob: <a href="data/refugee-stats.json">data/refugee-stats.json</a></p>
+    </section>
+
+    <section class="content-block">
+      <h2>Recruit Refugees</h2>
+      <p>Each run gives exactly 3 recruits:</p>
+      <ul>
+        <li>Pick 1: <strong>500 tickets</strong></li>
+        <li>Pick 2: <strong>2000 tickets</strong></li>
+        <li>Pick 3: <strong>5000 tickets</strong></li>
+      </ul>
+
+      <div class="hero-actions">
+        <button id="pick-1-btn" class="btn">Recruit #1 (500)</button>
+        <button id="pick-2-btn" class="btn" disabled>Recruit #2 (2000)</button>
+        <button id="pick-3-btn" class="btn" disabled>Recruit #3 (5000)</button>
+        <button id="reset-btn" class="btn">Reset</button>
+      </div>
+
+      <div id="recruit-results" class="content-grid recruit-results"></div>
+      <p id="recruit-message" class="table-data-link"></p>
+    </section>
+  </main>
+
+  <script src="js/refugee-recruitment.js"></script>
+</body>
+</html>
