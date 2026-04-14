@@ -19,7 +19,7 @@
   <main class="container">
     <section class="page-header">
       <h1>Refugees & Recruitment</h1>
-      <p>Recruit up to three random refugees using ticket costs that increase each pick.</p>
+      <p>How recruitment probabilities work, what the footnote means, and how to spend tickets efficiently for Purple and Gold (Orange/S) targets.</p>
     </section>
 
     <section class="content-block">
@@ -34,26 +34,29 @@
     </section>
 
     <section class="content-block">
-      <h2>Recruit Refugees</h2>
-      <p>Each run gives exactly 3 recruits:</p>
+      <h2>How the 3-Refugee Screen Works</h2>
+      <p>Each recruitment run shows <strong>3 refugees</strong>. When you recruit one, the game uses <strong>weights</strong> (not flat percentages) based on the qualities still visible on screen.</p>
+      <p><strong>Simple summary of the footnote:</strong> the chance to get a quality is:</p>
+      <p><strong>chance = target quality weight / total weight of unrecruited refugees shown</strong></p>
+      <ul>
+        <li><strong>S (Gold/Orange)</strong> has weight <strong>1</strong></li>
+        <li><strong>All other qualities</strong> have weight <strong>2</strong></li>
+      </ul>
+      <p>So if the 3 shown refugees are all unrecruited, S is naturally less likely than non-S qualities because its weight is lower.</p>
+    </section>
+
+    <section class="content-block">
+      <h2>Ticket Costs and Best Value Strategy</h2>
+      <p>Per run, you can recruit up to 3 times:</p>
       <ul>
         <li>Pick 1: <strong>500 tickets</strong></li>
         <li>Pick 2: <strong>2000 tickets</strong></li>
         <li>Pick 3: <strong>5000 tickets</strong></li>
       </ul>
-
-      <div class="hero-actions">
-        <button id="pick-1-btn" class="btn">Recruit #1 (500)</button>
-        <button id="pick-2-btn" class="btn" disabled>Recruit #2 (2000)</button>
-        <button id="pick-3-btn" class="btn" disabled>Recruit #3 (5000)</button>
-        <button id="reset-btn" class="btn">Reset</button>
-      </div>
-
-      <div id="recruit-results" class="content-grid recruit-results"></div>
-      <p id="recruit-message" class="table-data-link"></p>
+      <p><strong>Cheapest method for Purple:</strong> prioritize <strong>Pick 1</strong> whenever no Purple/Gold appears early. It gives the lowest ticket cost per attempt and is the most efficient way to farm Purple over time.</p>
+      <p><strong>Cheapest method for Gold (Orange/S):</strong> also focus on <strong>Pick 1</strong> attempts across many runs. Since S has lower weight, paying for expensive Pick 2/3 is usually less efficient unless you already see a high-value target and are willing to pay extra to secure it.</p>
+      <p><strong>Practical rule:</strong> use Pick 2/3 selectively (when the board is favorable), but for pure cost-efficiency, repeat cheap first picks across many runs.</p>
     </section>
   </main>
-
-  <script src="js/refugee-recruitment.js"></script>
 </body>
 </html>
