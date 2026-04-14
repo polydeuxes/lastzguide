@@ -1,0 +1,69 @@
+{
+  "updated": "2026-04-14",
+  "refugees": [
+    {
+      "name": "Diplomats",
+      "statistics": {}
+    },
+    {
+      "name": "Butlers",
+      "statistics": {}
+    },
+    {
+      "name": "Scientists",
+      "statistics": {}
+    },
+    {
+      "name": "Metallurgist",
+      "statistics": {}
+    },
+    {
+      "name": "Community Manager",
+      "statistics": {}
+    },
+    {
+      "name": "Nurse",
+      "statistics": {}
+    },
+    {
+      "name": "Farmer",
+      "statistics": {}
+    },
+    {
+      "name": "Lumberjack",
+      "statistics": {}
+    },
+    {
+      "name": "Shooter Instructor",
+      "statistics": {}
+    },
+    {
+      "name": "Assaulter Instructor",
+      "statistics": {}
+    },
+    {
+      "name": "Rider Instructor",
+      "statistics": {}
+    },
+    {
+      "name": "Warehouse Keeper",
+      "statistics": {}
+    },
+    {
+      "name": "Mechanic",
+      "statistics": {}
+    },
+    {
+      "name": "Merchant",
+      "statistics": {}
+    },
+    {
+      "name": "Stamina Trainer",
+      "statistics": {}
+    },
+    {
+      "name": "Officer",
+      "statistics": {}
+    }
+  ]
+}
