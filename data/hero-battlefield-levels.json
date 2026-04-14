@@ -109,33 +109,33 @@
   },
   {
     "level": "19-20",
-    "power": "",
+    "power": "9.80M",
     "reward": "6000",
-    "firstKill": ""
+    "firstKill": "11000"
   },
   {
     "level": "20-20",
-    "power": "",
+    "power": "10.70M",
     "reward": "6600",
-    "firstKill": ""
+    "firstKill": "11600"
   },
   {
     "level": "21-20",
-    "power": "",
+    "power": "14.90M",
     "reward": "7200",
-    "firstKill": ""
+    "firstKill": "14200"
   },
   {
     "level": "22-20",
-    "power": "",
+    "power": "16.40M",
     "reward": "7800",
-    "firstKill": ""
+    "firstKill": "14800"
   },
   {
     "level": "23-20",
     "power": "",
     "reward": "8400",
-    "firstKill": ""
+    "firstKill": "15400"
   },
   {
     "level": "24-20",
