@@ -237,3 +237,41 @@ ul {
 .recruit-card {
   margin: 0;
 }
+
+.table-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.table-controls label {
+  display: grid;
+  gap: 6px;
+  min-width: 180px;
+  color: #b7c2cc;
+}
+
+.table-controls input,
+.table-controls select {
+  background: #0b0f14;
+  color: #e6edf3;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.sort-btn {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tips-box {
+  border-color: rgba(124, 200, 255, 0.5);
+  background: linear-gradient(180deg, rgba(124, 200, 255, 0.12), rgba(124, 200, 255, 0.04));
+}
