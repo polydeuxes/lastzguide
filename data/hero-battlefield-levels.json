@@ -1,52 +1,314 @@
 [
-  {"level":"1-20","power":"","reward":"","firstKill":""},
-  {"level":"2-20","power":"","reward":"","firstKill":""},
-  {"level":"3-20","power":"","reward":"","firstKill":""},
-  {"level":"4-20","power":"","reward":"","firstKill":""},
-  {"level":"5-20","power":"414K","reward":"","firstKill":""},
-  {"level":"6-20","power":"572K","reward":"","firstKill":""},
-  {"level":"7-20","power":"","reward":"","firstKill":""},
-  {"level":"8-20","power":"","reward":"","firstKill":""},
-  {"level":"9-20","power":"1.50M","reward":"","firstKill":""},
-  {"level":"10-20","power":"1.80M","reward":"","firstKill":""},
-  {"level":"11-20","power":"2.10M","reward":"","firstKill":""},
-  {"level":"12-20","power":"2.80M","reward":"","firstKill":""},
-  {"level":"13-20","power":"","reward":"","firstKill":""},
-  {"level":"14-20","power":"","reward":"","firstKill":""},
-  {"level":"15-20","power":"5.80M","reward":"","firstKill":""},
-  {"level":"16-20","power":"","reward":"","firstKill":""},
-  {"level":"17-20","power":"","reward":"","firstKill":""},
-  {"level":"18-20","power":"","reward":"","firstKill":""},
-  {"level":"19-20","power":"","reward":"","firstKill":""},
-  {"level":"20-20","power":"","reward":"","firstKill":""},
-  {"level":"21-20","power":"","reward":"","firstKill":""},
-  {"level":"22-20","power":"","reward":"","firstKill":""},
-  {"level":"23-20","power":"","reward":"","firstKill":""},
-  {"level":"24-20","power":"","reward":"","firstKill":""},
-  {"level":"25-20","power":"","reward":"","firstKill":""},
-  {"level":"26-20","power":"22.90M","reward":"","firstKill":""},
-  {"level":"27-20","power":"30.50M","reward":"","firstKill":""},
-  {"level":"28-20","power":"","reward":"","firstKill":""},
-  {"level":"29-20","power":"","reward":"","firstKill":""},
-  {"level":"30-20","power":"","reward":"","firstKill":""},
-  {"level":"31-20","power":"","reward":"","firstKill":""},
-  {"level":"32-20","power":"","reward":"","firstKill":""},
-  {"level":"33-20","power":"","reward":"","firstKill":""},
-  {"level":"34-20","power":"","reward":"","firstKill":""},
-  {"level":"35-20","power":"","reward":"","firstKill":""},
-  {"level":"36-20","power":"","reward":"","firstKill":""},
-  {"level":"37-20","power":"","reward":"","firstKill":""},
-  {"level":"38-20","power":"","reward":"","firstKill":""},
-  {"level":"39-20","power":"","reward":"","firstKill":""},
-  {"level":"40-20","power":"","reward":"","firstKill":""},
-  {"level":"41-20","power":"","reward":"","firstKill":""},
-  {"level":"42-20","power":"","reward":"","firstKill":""},
-  {"level":"43-20","power":"","reward":"","firstKill":""},
-  {"level":"44-20","power":"","reward":"","firstKill":""},
-  {"level":"45-20","power":"","reward":"","firstKill":""},
-  {"level":"46-20","power":"","reward":"","firstKill":""},
-  {"level":"47-20","power":"","reward":"","firstKill":""},
-  {"level":"48-20","power":"","reward":"","firstKill":""},
-  {"level":"49-20","power":"","reward":"","firstKill":""},
-  {"level":"50-20","power":"","reward":"","firstKill":""}
+  {
+    "level": "1-20",
+    "power": "",
+    "reward": "700",
+    "firstKill": ""
+  },
+  {
+    "level": "2-20",
+    "power": "",
+    "reward": "900",
+    "firstKill": ""
+  },
+  {
+    "level": "3-20",
+    "power": "",
+    "reward": "1100",
+    "firstKill": ""
+  },
+  {
+    "level": "4-20",
+    "power": "",
+    "reward": "1300",
+    "firstKill": ""
+  },
+  {
+    "level": "5-20",
+    "power": "414K",
+    "reward": "1500",
+    "firstKill": ""
+  },
+  {
+    "level": "6-20",
+    "power": "572K",
+    "reward": "1700",
+    "firstKill": ""
+  },
+  {
+    "level": "7-20",
+    "power": "",
+    "reward": "1900",
+    "firstKill": ""
+  },
+  {
+    "level": "8-20",
+    "power": "",
+    "reward": "2100",
+    "firstKill": ""
+  },
+  {
+    "level": "9-20",
+    "power": "1.50M",
+    "reward": "2400",
+    "firstKill": ""
+  },
+  {
+    "level": "10-20",
+    "power": "1.80M",
+    "reward": "2700",
+    "firstKill": ""
+  },
+  {
+    "level": "11-20",
+    "power": "2.10M",
+    "reward": "3000",
+    "firstKill": ""
+  },
+  {
+    "level": "12-20",
+    "power": "2.80M",
+    "reward": "3300",
+    "firstKill": ""
+  },
+  {
+    "level": "13-20",
+    "power": "",
+    "reward": "3600",
+    "firstKill": ""
+  },
+  {
+    "level": "14-20",
+    "power": "",
+    "reward": "3900",
+    "firstKill": ""
+  },
+  {
+    "level": "15-20",
+    "power": "5.80M",
+    "reward": "4200",
+    "firstKill": ""
+  },
+  {
+    "level": "16-20",
+    "power": "",
+    "reward": "4500",
+    "firstKill": ""
+  },
+  {
+    "level": "17-20",
+    "power": "",
+    "reward": "5000",
+    "firstKill": ""
+  },
+  {
+    "level": "18-20",
+    "power": "",
+    "reward": "5500",
+    "firstKill": ""
+  },
+  {
+    "level": "19-20",
+    "power": "",
+    "reward": "6000",
+    "firstKill": ""
+  },
+  {
+    "level": "20-20",
+    "power": "",
+    "reward": "6600",
+    "firstKill": ""
+  },
+  {
+    "level": "21-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "22-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "23-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "24-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "25-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "26-20",
+    "power": "22.90M",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "27-20",
+    "power": "30.50M",
+    "reward": "",
+    "firstKill": "20800"
+  },
+  {
+    "level": "28-20",
+    "power": "",
+    "reward": "",
+    "firstKill": "21400"
+  },
+  {
+    "level": "29-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "30-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "31-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "32-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "33-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "34-20",
+    "power": "54.40M",
+    "reward": "",
+    "firstKill": "25500"
+  },
+  {
+    "level": "35-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "36-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "37-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "38-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "39-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "40-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "41-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "42-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "43-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "44-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "45-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "46-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "47-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "48-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "49-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "50-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "51-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  },
+  {
+    "level": "52-20",
+    "power": "",
+    "reward": "",
+    "firstKill": ""
+  }
 ]
