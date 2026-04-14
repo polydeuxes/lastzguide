@@ -21,9 +21,10 @@ fetch('data/hero-battlefield-levels.json')
       row.appendChild(createCell(entry.level));
       row.appendChild(createCell(entry.power));
       row.appendChild(createCell(entry.reward));
+      row.appendChild(createCell(entry.firstKill ?? ''));
       tableBody.appendChild(row);
     });
   })
   .catch((error) => {
-    tableBody.innerHTML = `<tr><td colspan="3">${error.message}</td></tr>`;
+    tableBody.innerHTML = `<tr><td colspan="4">${error.message}</td></tr>`;
   });
