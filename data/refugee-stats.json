@@ -8,10 +8,10 @@
       "buffByQuality": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value.",
       "upgradeNotes": "Highest priority upgrade target. Upgrade Purple and Gold versions first.",
       "qualityBuffs": {
-        "Green": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value. (entry tier impact).",
-        "Blue": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value. (improved over Green).",
-        "Purple": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value. (high impact tier; upgradable).",
-        "Gold": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value. (best impact tier; upgradable)."
+        "Green": "N/A",
+        "Blue": "N/A",
+        "Purple": "+9 seconds per star tick. +45 seconds per completed star.",
+        "Gold": "+9 seconds per star tick. +45 seconds per completed star."
       }
     },
     {
