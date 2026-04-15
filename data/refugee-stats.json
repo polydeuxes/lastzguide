@@ -10,7 +10,7 @@
       "qualityBuffs": {
         "Green": "N/A",
         "Blue": "N/A",
-        "Purple": "+9 seconds per star tick. +45 seconds per completed star.",
+        "Purple": "+6 seconds per star tick. +28 seconds per completed star.",
         "Gold": "+9 seconds per star tick. +45 seconds per completed star."
       }
     },
