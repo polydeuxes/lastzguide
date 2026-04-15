@@ -8,46 +8,35 @@
     return;
   }
 
-  const qualityOrder = ['Green', 'Blue', 'Purple', 'Gold'];
-  const qualityRank = qualityOrder.reduce((acc, quality, index) => {
-    acc[quality.toLowerCase()] = index;
-    return acc;
-  }, {});
+  const qualityOrder = ['Purple', 'Gold'];
+  const qualityRank = { purple: 0, gold: 1 };
 
   let refugees = [];
   let sortKey = 'name';
   let sortAsc = true;
 
-  function defaultQualityBuffs(buffText) {
-    return {
-      Green: `${buffText} (entry tier impact).`,
-      Blue: `${buffText} (improved over Green).`,
-      Purple: `${buffText} (high impact tier; upgradable).`,
-      Gold: `${buffText} (best impact tier; upgradable).`
-    };
-  }
-
   function normalizeRefugee(item) {
     const name = String(item.name || item.refugee || item.job || 'Unknown').trim();
-    const job = String(item.job || item.role || item.name || 'Unknown').trim();
-    const buffByQuality = String(item.buffByQuality || item.buff || item.statistics?.buffByQuality || 'See in-game details by quality.').trim();
-    const upgradeNotes = String(item.upgradeNotes || item.notes || item.statistics?.notes || 'Only Purple and Gold are upgradable.').trim();
-    const qualityBuffs = item.qualityBuffs && typeof item.qualityBuffs === 'object'
-      ? item.qualityBuffs
-      : defaultQualityBuffs(buffByQuality);
+    const basePerk = String(item.basePerk || item.buffByQuality || item.buff || 'See in-game details.').trim();
+    const upgradeNotes = String(item.upgradeNotes || item.notes || 'Only Purple and Gold are upgradable.').trim();
 
-    return { name, job, upgradeNotes, qualityBuffs };
+    const qualityData = item.qualityData && typeof item.qualityData === 'object'
+      ? item.qualityData
+      : {};
+
+    return { name, basePerk, upgradeNotes, qualityData };
   }
 
   function explodeQualityRows(refugeeRows) {
     return refugeeRows.flatMap((row) => qualityOrder
-      .filter((quality) => row.qualityBuffs[quality])
+      .filter((quality) => row.qualityData[quality])
       .map((quality) => ({
         name: row.name,
-        job: row.job,
         quality,
         qualityRank: qualityRank[quality.toLowerCase()] ?? 999,
-        buffByQuality: String(row.qualityBuffs[quality]).trim(),
+        basePerk: String(row.basePerk).trim(),
+        qualityPerk: String(row.qualityData[quality].basePerk || '').trim(),
+        upgradePerk: String(row.qualityData[quality].upgradePerk || '').trim(),
         upgradeNotes: row.upgradeNotes
       })));
   }
@@ -59,7 +48,7 @@
     }
 
     const grouped = rows.reduce((acc, row) => {
-      const groupKey = `${row.name}::${row.job}`;
+      const groupKey = row.name;
       if (!acc[groupKey]) {
         acc[groupKey] = [];
       }
@@ -71,9 +60,10 @@
       .map((group) => group.map((row, index) => `
         <tr>
           ${index === 0 ? `<td rowspan="${group.length}">${row.name}</td>` : ''}
-          ${index === 0 ? `<td rowspan="${group.length}">${row.job}</td>` : ''}
           <td>${row.quality}</td>
-          <td>${row.buffByQuality}</td>
+          ${index === 0 ? `<td rowspan="${group.length}">${row.basePerk}</td>` : ''}
+          <td>${row.qualityPerk}</td>
+          <td>${row.upgradePerk}</td>
           ${index === 0 ? `<td rowspan="${group.length}">${row.upgradeNotes}</td>` : ''}
         </tr>
       `).join(''))
@@ -81,26 +71,27 @@
   }
 
   function updateJobFilterOptions(rows) {
-    const uniqueJobs = Array.from(new Set(rows.map((row) => row.job))).sort((a, b) => a.localeCompare(b));
-    jobFilter.innerHTML = '<option value="all">All jobs</option>'
-      + uniqueJobs.map((job) => `<option value="${job}">${job}</option>`).join('');
+    const uniqueNames = Array.from(new Set(rows.map((row) => row.name))).sort((a, b) => a.localeCompare(b));
+    jobFilter.innerHTML = '<option value="all">All refugees</option>'
+      + uniqueNames.map((name) => `<option value="${name}">${name}</option>`).join('');
   }
 
   function getFilteredSortedRows() {
     const searchTerm = searchInput.value.trim().toLowerCase();
-    const selectedJob = jobFilter.value;
+    const selectedName = jobFilter.value;
 
     const filtered = refugees.filter((row) => {
       const matchesSearch = !searchTerm
         || row.name.toLowerCase().includes(searchTerm)
-        || row.job.toLowerCase().includes(searchTerm)
         || row.quality.toLowerCase().includes(searchTerm)
-        || row.buffByQuality.toLowerCase().includes(searchTerm)
+        || row.basePerk.toLowerCase().includes(searchTerm)
+        || row.qualityPerk.toLowerCase().includes(searchTerm)
+        || row.upgradePerk.toLowerCase().includes(searchTerm)
         || row.upgradeNotes.toLowerCase().includes(searchTerm);
 
-      const matchesJob = selectedJob === 'all' || row.job === selectedJob;
+      const matchesName = selectedName === 'all' || row.name === selectedName;
 
-      return matchesSearch && matchesJob;
+      return matchesSearch && matchesName;
     });
 
     filtered.sort((a, b) => {
@@ -152,6 +143,6 @@
     updateJobFilterOptions(refugees);
     render();
   } catch (error) {
-    tableBody.innerHTML = '<tr><td colspan="5">Failed to load refugee data.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="6">Failed to load refugee data.</td></tr>';
   }
 })();
