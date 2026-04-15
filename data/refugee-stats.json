@@ -8,11 +8,11 @@
       "qualityData": {
         "Purple": {
           "basePerk": "+2 Alliance Help Cap",
-          "upgradePerk": "+6 seconds per tick, +28 seconds per completed star"
+          "upgradePerk": "+6 seconds ally assist per tick, +28 seconds ally assist per completed star"
         },
         "Gold": {
           "basePerk": "+3 Alliance Help Cap",
-          "upgradePerk": "+9 seconds per tick, +45 seconds per completed star"
+          "upgradePerk": "+9 seconds ally assist per tick, +45 seconds ally assist per completed star"
         }
       }
     },
@@ -34,7 +34,7 @@
     {
       "name": "Stamina Trainer",
       "basePerk": "Experience Production Rate",
-      "upgradeNotes": "Lower priority.",
+      "upgradeNotes": "Low priority.",
       "qualityData": {
         "Purple": {
           "basePerk": "+3.2% Experience Production Rate",
@@ -49,7 +49,7 @@
     {
       "name": "Farmer",
       "basePerk": "Food Production Rate",
-      "upgradeNotes": "Lower priority.",
+      "upgradeNotes": "Low priority.",
       "qualityData": {
         "Purple": {
           "basePerk": "+3.2% Food Production Rate",
@@ -64,7 +64,7 @@
     {
       "name": "Lumberjack",
       "basePerk": "Wood Production Rate",
-      "upgradeNotes": "Lower priority.",
+      "upgradeNotes": "Low priority.",
       "qualityData": {
         "Purple": {
           "basePerk": "+3.2% Wood Production Rate",
@@ -79,7 +79,7 @@
     {
       "name": "Community Manager",
       "basePerk": "Zent Production Rate",
-      "upgradeNotes": "Lower priority.",
+      "upgradeNotes": "Low priority.",
       "qualityData": {
         "Purple": {
           "basePerk": "+3.2% Zent Production Rate",
@@ -94,7 +94,7 @@
     {
       "name": "Mechanic",
       "basePerk": "Electricity Generation Rate",
-      "upgradeNotes": "Lower priority.",
+      "upgradeNotes": "Low priority.",
       "qualityData": {
         "Purple": {
           "basePerk": "+3.2% Electricity Generation Rate",
@@ -109,7 +109,7 @@
     {
       "name": "Metallurgist",
       "basePerk": "Enhancement Alloy Production Rate",
-      "upgradeNotes": "Lower priority.",
+      "upgradeNotes": "Low priority.",
       "qualityData": {
         "Purple": {
           "basePerk": "+3.2% Enhancement Alloy Production Rate",
@@ -124,7 +124,7 @@
     {
       "name": "Assaulter Instructor",
       "basePerk": "Assaulter Training Speed",
-      "upgradeNotes": "Collect all instructors; usually secondary for upgrades.",
+      "upgradeNotes": "High Priority. Don't upgrade yet.",
       "qualityData": {
         "Purple": {
           "basePerk": "+9% Assaulter Training Speed",
@@ -139,7 +139,7 @@
     {
       "name": "Shooter Instructor",
       "basePerk": "Shooter Training Speed",
-      "upgradeNotes": "Collect all instructors; usually secondary for upgrades.",
+      "upgradeNotes": "High Priority. Don't upgrade yet.",
       "qualityData": {
         "Purple": {
           "basePerk": "+9% Shooter Training Speed",
@@ -154,7 +154,7 @@
     {
       "name": "Rider Instructor",
       "basePerk": "Rider Training Speed",
-      "upgradeNotes": "Collect all instructors; usually secondary for upgrades.",
+      "upgradeNotes": "High Priority. Don't upgrade yet.",
       "qualityData": {
         "Purple": {
           "basePerk": "+9% Rider Training Speed",
@@ -169,7 +169,7 @@
     {
       "name": "Warehouse Keeper",
       "basePerk": "Resource Protection",
-      "upgradeNotes": "Lower priority.",
+      "upgradeNotes": "Low priority.",
       "qualityData": {
         "Purple": {
           "basePerk": "+16,000 Resource Protection",
@@ -199,7 +199,7 @@
     {
       "name": "Scientist",
       "basePerk": "Research Speed",
-      "upgradeNotes": "Collect and upgrade after top priorities.",
+      "upgradeNotes": "High Priority. Don't upgrade yet.",
       "qualityData": {
         "Purple": {
           "basePerk": "+16% Research Speed",
@@ -214,7 +214,7 @@
     {
       "name": "Butler",
       "basePerk": "Construction Speed",
-      "upgradeNotes": "Collect and upgrade after top priorities.",
+      "upgradeNotes": "High Priority. Don't upgrade yet.",
       "qualityData": {
         "Purple": {
           "basePerk": "+16% Construction Speed",
@@ -229,7 +229,7 @@
     {
       "name": "Merchant",
       "basePerk": "Zent Yields Bonus",
-      "upgradeNotes": "Lower priority.",
+      "upgradeNotes": "Low priority.",
       "qualityData": {
         "Purple": {
           "basePerk": "+4.8% Zent Yields Bonus",
