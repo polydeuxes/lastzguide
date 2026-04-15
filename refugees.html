@@ -28,7 +28,7 @@
 
       <p>You should also recruit <strong>Butler</strong>, <strong>Scientist</strong>, and all three <strong>Instructors</strong> for their passive value, but they usually are not where your early upgrade points should go.</p>
 
-      <p><strong>Green</strong> and <strong>Blue</strong> refugees only provide their base perk. <strong>Purple</strong> and <strong>Gold</strong> refugees provide both a base perk and an upgradable perk, which is why higher-quality pulls matter so much more.</p>
+      <p><strong>Purple</strong> and <strong>Gold</strong> refugees provide both a base perk and an upgradable perk. This table focuses on those tiers because they are the only ones with upgrade scaling.</p>
 
       <h3>Gold Butler Notes</h3>
       <p>Gold Butler starts with <strong>Construction Speed +25%</strong>. Butler stars use a 5-star track with 5 chips per star. Each chip adds <strong>+18s</strong> of free speedup time, and each completed star adds another <strong>+90s</strong>. The value is nice, but the cost ramps quickly, so Butler is usually better treated as a secondary upgrade after your core priorities are handled.</p>
@@ -36,17 +36,17 @@
 
     <section class="content-block">
       <h2>Refugee Jobs & Perks</h2>
-      <p>Each refugee has a job, a base perk, and in higher qualities an upgradable perk. <strong>Green</strong> and <strong>Blue</strong> only provide the base perk. <strong>Purple</strong> and <strong>Gold</strong> provide both. To keep the table readable, the quality breakdown should show each quality tag with its perk values beside it.</p>
+      <p>Each refugee has one core base perk and separate Purple/Gold quality values. To keep the table focused on upgrade-relevant data, the table now shows only <strong>Purple</strong> and <strong>Gold</strong> quality rows.</p>
 
       <div class="table-controls">
         <label>
           Search
-          <input id="refugee-search" type="search" placeholder="Search refugee, job, or perk">
+          <input id="refugee-search" type="search" placeholder="Search refugee, quality, or perk">
         </label>
         <label>
-          Job filter
+          Refugee filter
           <select id="job-filter">
-            <option value="all">All jobs</option>
+            <option value="all">All refugees</option>
           </select>
         </label>
       </div>
@@ -56,10 +56,10 @@
           <thead>
             <tr>
               <th><button class="sort-btn" data-sort-key="name" type="button">Refugee</button></th>
-              <th><button class="sort-btn" data-sort-key="job" type="button">Job</button></th>
+              <th><button class="sort-btn" data-sort-key="quality" type="button">Quality</button></th>
               <th><button class="sort-btn" data-sort-key="basePerk" type="button">Base Perk</button></th>
+              <th><button class="sort-btn" data-sort-key="qualityPerk" type="button">Quality Perk</button></th>
               <th><button class="sort-btn" data-sort-key="upgradePerk" type="button">Upgradable Perk</button></th>
-              <th><button class="sort-btn" data-sort-key="qualityBreakdown" type="button">Quality Breakdown</button></th>
               <th><button class="sort-btn" data-sort-key="upgradeNotes" type="button">Upgrade Guidance</button></th>
             </tr>
           </thead>

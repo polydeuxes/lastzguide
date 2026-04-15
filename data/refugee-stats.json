@@ -1,212 +1,244 @@
 {
-  "updated": "2026-04-14",
+  "updated": "2026-04-15",
   "refugees": [
     {
       "name": "Diplomat",
-      "job": "Diplomat",
-      "quality": "N/A / Blue +1 / Purple +2 / Gold +3",
-      "buffByQuality": "Alliance Help Cap",
+      "basePerk": "Alliance Help Cap",
       "upgradeNotes": "Highest priority.",
-      "qualityBuffs": {
-        "Green": "N/A",
-        "Blue": "N/A",
-        "Purple": "+6 seconds per star tick. +28 seconds per completed star.",
-        "Gold": "+9 seconds per star tick. +45 seconds per completed star."
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+2 Alliance Help Cap",
+          "upgradePerk": "+6 seconds per tick, +28 seconds per completed star"
+        },
+        "Gold": {
+          "basePerk": "+3 Alliance Help Cap",
+          "upgradePerk": "+9 seconds per tick, +45 seconds per completed star"
+        }
       }
     },
     {
       "name": "Nurse",
-      "job": "Nurse",
-      "quality": "Green / Blue / Purple / Gold +25%",
-      "buffByQuality": "Healing Speed.",
-      "upgradeNotes": "High Priority",
-      "qualityBuffs": {
-        "Green": "N/A",
-        "Blue": "N/A",
-        "Purple": "+10 beds per star tick. +50 beds per completed star.",
-        "Gold": "+15 beds per star tick. +75 beds per completed star."
-      }
-    },
-    {
-      "name": "Officer",
-      "job": "Officer",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Military/training support buff scales by quality tier.",
-      "upgradeNotes": "High Priority",
-      "qualityBuffs": {
-        "Green": "Military/training support buff scales by quality tier. (entry tier impact).",
-        "Blue": "Military/training support buff scales by quality tier. (improved over Green).",
-        "Purple": "Military/training support buff scales by quality tier. (high impact tier; upgradable).",
-        "Gold": "Military/training support buff scales by quality tier. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Butler",
-      "job": "Butler",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star).",
-      "upgradeNotes": "Collect, but do not upgrade under current resource plan.",
-      "qualityBuffs": {
-        "Green": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star). (entry tier impact).",
-        "Blue": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star). (improved over Green).",
-        "Purple": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star). (high impact tier; upgradable).",
-        "Gold": "Gold Butler base: Construction Speed +25%. Upgrade chips add free speedup duration (+18s per chip, +90s per completed star). (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Scientist",
-      "job": "Scientist",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Research-related support buff scales with quality.",
-      "upgradeNotes": "Collect, but do not upgrade under current resource plan.",
-      "qualityBuffs": {
-        "Green": "Research-related support buff scales with quality. (entry tier impact).",
-        "Blue": "Research-related support buff scales with quality. (improved over Green).",
-        "Purple": "Research-related support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Research-related support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Shooter Instructor",
-      "job": "Instructor",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Shooter training support buff scales with quality.",
-      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan.",
-      "qualityBuffs": {
-        "Green": "Shooter training support buff scales with quality. (entry tier impact).",
-        "Blue": "Shooter training support buff scales with quality. (improved over Green).",
-        "Purple": "Shooter training support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Shooter training support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Assaulter Instructor",
-      "job": "Instructor",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Assaulter training support buff scales with quality.",
-      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan.",
-      "qualityBuffs": {
-        "Green": "Assaulter training support buff scales with quality. (entry tier impact).",
-        "Blue": "Assaulter training support buff scales with quality. (improved over Green).",
-        "Purple": "Assaulter training support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Assaulter training support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Rider Instructor",
-      "job": "Instructor",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Rider training support buff scales with quality.",
-      "upgradeNotes": "Collect all instructors; do not upgrade under current resource plan.",
-      "qualityBuffs": {
-        "Green": "Rider training support buff scales with quality. (entry tier impact).",
-        "Blue": "Rider training support buff scales with quality. (improved over Green).",
-        "Purple": "Rider training support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Rider training support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Metallurgist",
-      "job": "Production",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Metal production/support buff scales with quality.",
-      "upgradeNotes": "Lower priority. Avoid upgrades while core priorities are unfinished.",
-      "qualityBuffs": {
-        "Green": "Metal production/support buff scales with quality. (entry tier impact).",
-        "Blue": "Metal production/support buff scales with quality. (improved over Green).",
-        "Purple": "Metal production/support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Metal production/support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Community Manager",
-      "job": "Support",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "General support buff scales with quality.",
-      "upgradeNotes": "Lower priority.",
-      "qualityBuffs": {
-        "Green": "General support buff scales with quality. (entry tier impact).",
-        "Blue": "General support buff scales with quality. (improved over Green).",
-        "Purple": "General support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "General support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Farmer",
-      "job": "Production",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Food production/support buff scales with quality.",
-      "upgradeNotes": "Lower priority.",
-      "qualityBuffs": {
-        "Green": "Food production/support buff scales with quality. (entry tier impact).",
-        "Blue": "Food production/support buff scales with quality. (improved over Green).",
-        "Purple": "Food production/support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Food production/support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Lumberjack",
-      "job": "Production",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Wood production/support buff scales with quality.",
-      "upgradeNotes": "Lower priority.",
-      "qualityBuffs": {
-        "Green": "Wood production/support buff scales with quality. (entry tier impact).",
-        "Blue": "Wood production/support buff scales with quality. (improved over Green).",
-        "Purple": "Wood production/support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Wood production/support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Warehouse Keeper",
-      "job": "Storage",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Storage/protection buff scales with quality.",
-      "upgradeNotes": "Lower priority.",
-      "qualityBuffs": {
-        "Green": "Storage/protection buff scales with quality. (entry tier impact).",
-        "Blue": "Storage/protection buff scales with quality. (improved over Green).",
-        "Purple": "Storage/protection buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Storage/protection buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Mechanic",
-      "job": "Support",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Mechanical/maintenance support buff scales with quality.",
-      "upgradeNotes": "Lower priority.",
-      "qualityBuffs": {
-        "Green": "Mechanical/maintenance support buff scales with quality. (entry tier impact).",
-        "Blue": "Mechanical/maintenance support buff scales with quality. (improved over Green).",
-        "Purple": "Mechanical/maintenance support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Mechanical/maintenance support buff scales with quality. (best impact tier; upgradable)."
-      }
-    },
-    {
-      "name": "Merchant",
-      "job": "Trade",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Trade/economy support buff scales with quality.",
-      "upgradeNotes": "Lower priority.",
-      "qualityBuffs": {
-        "Green": "Trade/economy support buff scales with quality. (entry tier impact).",
-        "Blue": "Trade/economy support buff scales with quality. (improved over Green).",
-        "Purple": "Trade/economy support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Trade/economy support buff scales with quality. (best impact tier; upgradable)."
+      "basePerk": "Healing Speed",
+      "upgradeNotes": "High priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+25% Healing Speed",
+          "upgradePerk": "+10 beds per tick, +50 beds per completed star"
+        },
+        "Gold": {
+          "basePerk": "+25% Healing Speed",
+          "upgradePerk": "+15 beds per tick, +75 beds per completed star"
+        }
       }
     },
     {
       "name": "Stamina Trainer",
-      "job": "Support",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Stamina-related support buff scales with quality.",
+      "basePerk": "Experience Production Rate",
       "upgradeNotes": "Lower priority.",
-      "qualityBuffs": {
-        "Green": "Stamina-related support buff scales with quality. (entry tier impact).",
-        "Blue": "Stamina-related support buff scales with quality. (improved over Green).",
-        "Purple": "Stamina-related support buff scales with quality. (high impact tier; upgradable).",
-        "Gold": "Stamina-related support buff scales with quality. (best impact tier; upgradable)."
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+3.2% Experience Production Rate",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+5% Experience Production Rate",
+          "upgradePerk": "+0.4% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Farmer",
+      "basePerk": "Food Production Rate",
+      "upgradeNotes": "Lower priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+3.2% Food Production Rate",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+5% Food Production Rate",
+          "upgradePerk": "+0.4% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Lumberjack",
+      "basePerk": "Wood Production Rate",
+      "upgradeNotes": "Lower priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+3.2% Wood Production Rate",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+5% Wood Production Rate",
+          "upgradePerk": "+0.4% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Community Manager",
+      "basePerk": "Zent Production Rate",
+      "upgradeNotes": "Lower priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+3.2% Zent Production Rate",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+5% Zent Production Rate",
+          "upgradePerk": "+0.4% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Mechanic",
+      "basePerk": "Electricity Generation Rate",
+      "upgradeNotes": "Lower priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+3.2% Electricity Generation Rate",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+5% Electricity Generation Rate",
+          "upgradePerk": "+0.4% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Metallurgist",
+      "basePerk": "Enhancement Alloy Production Rate",
+      "upgradeNotes": "Lower priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+3.2% Enhancement Alloy Production Rate",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+5% Enhancement Alloy Production Rate",
+          "upgradePerk": "+0.4% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Assaulter Instructor",
+      "basePerk": "Assaulter Training Speed",
+      "upgradeNotes": "Collect all instructors; usually secondary for upgrades.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+9% Assaulter Training Speed",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+15% Assaulter Training Speed",
+          "upgradePerk": "+0.5% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Shooter Instructor",
+      "basePerk": "Shooter Training Speed",
+      "upgradeNotes": "Collect all instructors; usually secondary for upgrades.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+9% Shooter Training Speed",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+15% Shooter Training Speed",
+          "upgradePerk": "+0.5% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Rider Instructor",
+      "basePerk": "Rider Training Speed",
+      "upgradeNotes": "Collect all instructors; usually secondary for upgrades.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+9% Rider Training Speed",
+          "upgradePerk": "+0.2% per tick, +1% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+15% Rider Training Speed",
+          "upgradePerk": "+0.5% per tick, +3% per completed star"
+        }
+      }
+    },
+    {
+      "name": "Warehouse Keeper",
+      "basePerk": "Resource Protection",
+      "upgradeNotes": "Lower priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+16,000 Resource Protection",
+          "upgradePerk": "+1,000 per tick, +5,000 per completed star"
+        },
+        "Gold": {
+          "basePerk": "+25,000 Resource Protection",
+          "upgradePerk": "+2,000 per tick, +10,000 per completed star"
+        }
+      }
+    },
+    {
+      "name": "Officer",
+      "basePerk": "Unit Capacity",
+      "upgradeNotes": "High priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+160 Unit Capacity",
+          "upgradePerk": "+10 per tick, +50 per completed star"
+        },
+        "Gold": {
+          "basePerk": "+250 Unit Capacity",
+          "upgradePerk": "+20 per tick, +100 per completed star"
+        }
+      }
+    },
+    {
+      "name": "Scientist",
+      "basePerk": "Research Speed",
+      "upgradeNotes": "Collect and upgrade after top priorities.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+16% Research Speed",
+          "upgradePerk": "+9 seconds free speedup per tick, +45 seconds per completed star"
+        },
+        "Gold": {
+          "basePerk": "+25% Research Speed",
+          "upgradePerk": "+18 seconds free speedup per tick, +90 seconds per completed star"
+        }
+      }
+    },
+    {
+      "name": "Butler",
+      "basePerk": "Construction Speed",
+      "upgradeNotes": "Collect and upgrade after top priorities.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+16% Construction Speed",
+          "upgradePerk": "+9 seconds free speedup per tick, +45 seconds per completed star"
+        },
+        "Gold": {
+          "basePerk": "+25% Construction Speed",
+          "upgradePerk": "+18 seconds free speedup per tick, +90 seconds per completed star"
+        }
+      }
+    },
+    {
+      "name": "Merchant",
+      "basePerk": "Zent Yields Bonus",
+      "upgradeNotes": "Lower priority.",
+      "qualityData": {
+        "Purple": {
+          "basePerk": "+4.8% Zent Yields Bonus",
+          "upgradePerk": "+0.3% per tick, +1.5% per completed star"
+        },
+        "Gold": {
+          "basePerk": "+7.5% Zent Yields Bonus",
+          "upgradePerk": "+0.6% per tick, +3% per completed star"
+        }
       }
     }
   ]
