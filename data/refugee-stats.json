@@ -4,9 +4,9 @@
     {
       "name": "Diplomat",
       "job": "Diplomat",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Alliance help / timer-reduction style building support scales with quality; higher tiers give stronger time value.",
-      "upgradeNotes": "Highest priority upgrade target. Upgrade Purple and Gold versions first.",
+      "quality": "N/A / Blue +1 / Purple +2 / Gold +3",
+      "buffByQuality": "Alliance Help Cap",
+      "upgradeNotes": "Highest priority.",
       "qualityBuffs": {
         "Green": "N/A",
         "Blue": "N/A",
@@ -17,14 +17,14 @@
     {
       "name": "Nurse",
       "job": "Nurse",
-      "quality": "Green / Blue / Purple / Gold",
-      "buffByQuality": "Hospital/healing support buff scales by quality tier.",
-      "upgradeNotes": "Second priority after Diplomat. Upgrade Purple and Gold only.",
+      "quality": "Green / Blue / Purple / Gold +25%",
+      "buffByQuality": "Healing Speed.",
+      "upgradeNotes": "High Priority",
       "qualityBuffs": {
-        "Green": "Hospital/healing support buff scales by quality tier. (entry tier impact).",
-        "Blue": "Hospital/healing support buff scales by quality tier. (improved over Green).",
-        "Purple": "Hospital/healing support buff scales by quality tier. (high impact tier; upgradable).",
-        "Gold": "Hospital/healing support buff scales by quality tier. (best impact tier; upgradable)."
+        "Green": "N/A",
+        "Blue": "N/A",
+        "Purple": "+10 beds per star tick. +50 beds per completed star.",
+        "Gold": "+15 beds per star tick. +75 beds per completed star."
       }
     },
     {
@@ -32,7 +32,7 @@
       "job": "Officer",
       "quality": "Green / Blue / Purple / Gold",
       "buffByQuality": "Military/training support buff scales by quality tier.",
-      "upgradeNotes": "Third priority after Diplomat and Nurse. Upgrade Purple and Gold only.",
+      "upgradeNotes": "High Priority",
       "qualityBuffs": {
         "Green": "Military/training support buff scales by quality tier. (entry tier impact).",
         "Blue": "Military/training support buff scales by quality tier. (improved over Green).",
