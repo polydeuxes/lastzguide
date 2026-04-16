@@ -275,3 +275,20 @@ ul {
   border-color: rgba(124, 200, 255, 0.5);
   background: linear-gradient(180deg, rgba(124, 200, 255, 0.12), rgba(124, 200, 255, 0.04));
 }
+
+
+.quiet-link-row {
+  margin-top: -8px;
+  text-align: right;
+}
+
+.quiet-link-row a {
+  color: #8aa0b5;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.quiet-link-row a:hover {
+  color: #b7c2cc;
+}
