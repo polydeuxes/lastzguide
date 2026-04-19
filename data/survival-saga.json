@@ -2,13 +2,18 @@
   "mode": "Basic",
   "difficultyCount": 9,
   "levelsPerDifficulty": 15,
-  "zombiesPerDifficulty": 15,
   "powerByLevel": {
     "D8L1": "11.5M",
     "D8L2": "14M",
     "D8L3": "16.0M",
     "D8L4": "16.5M",
     "D8L5": "16.5M",
-    "D8L6": "16.6M"
+    "D8L6": "16.6M",
+    "D8L7": "16.6M",
+    "D8L8": "16.6M",
+    "D8L9": "16.7M",
+    "D8L10": "16.7M",
+    "D8L11": "16.8M",
+    "D8L12": "16.8M"
   }
 }

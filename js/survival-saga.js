@@ -17,7 +17,6 @@ fetch('data/survival-saga.json')
     const {
       difficultyCount,
       levelsPerDifficulty,
-      zombiesPerDifficulty,
       powerByLevel
     } = data;
 
@@ -30,7 +29,6 @@ fetch('data/survival-saga.json')
 
         row.appendChild(createCell(`D${difficulty}`));
         row.appendChild(createCell(`L${level}`));
-        row.appendChild(createCell(String(zombiesPerDifficulty)));
         row.appendChild(createCell(powerByLevel[key] ?? ''));
 
         tableBody.appendChild(row);
@@ -38,5 +36,5 @@ fetch('data/survival-saga.json')
     }
   })
   .catch((error) => {
-    tableBody.innerHTML = `<tr><td colspan="4">${error.message}</td></tr>`;
+    tableBody.innerHTML = `<tr><td colspan="3">${error.message}</td></tr>`;
   });
