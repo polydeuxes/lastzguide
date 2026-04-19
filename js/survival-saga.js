@@ -15,7 +15,12 @@ const createHeaderCell = (text) => {
 const getPowerValue = ({ difficulty, level, powerByDifficulty }) => {
   const difficultyKey = `D${difficulty}`;
   const levelKey = `L${level}`;
-  return powerByDifficulty?.[difficultyKey]?.[levelKey] ?? '';
+
+  if (!powerByDifficulty || !powerByDifficulty[difficultyKey]) {
+    return '';
+  }
+
+  return powerByDifficulty[difficultyKey][levelKey] || '';
 };
 
 const createDifficultySection = ({
