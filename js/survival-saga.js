@@ -23,6 +23,60 @@ const getPowerValue = ({ difficulty, level, powerByDifficulty }) => {
   return powerByDifficulty[difficultyKey][levelKey] || '';
 };
 
+const normalizePowerByDifficulty = (rawData = {}) => {
+  if (rawData.powerByDifficulty && typeof rawData.powerByDifficulty === 'object') {
+    return rawData.powerByDifficulty;
+  }
+
+  const normalized = {};
+  const flatKeyPattern = /^d(\d+)l(\d+)$/i;
+
+  Object.entries(rawData).forEach(([key, value]) => {
+    const match = key.match(flatKeyPattern);
+    if (!match) {
+      return;
+    }
+
+    const difficultyKey = `D${Number(match[1])}`;
+    const levelKey = `L${Number(match[2])}`;
+
+    if (!normalized[difficultyKey]) {
+      normalized[difficultyKey] = {};
+    }
+
+    normalized[difficultyKey][levelKey] = value;
+  });
+
+  return normalized;
+};
+
+const getDifficultyCount = ({ difficultyCount, powerByDifficulty }) => {
+  if (Number.isInteger(difficultyCount) && difficultyCount > 0) {
+    return difficultyCount;
+  }
+
+  const highestDifficulty = Object.keys(powerByDifficulty || {})
+    .map((key) => Number(key.replace(/^D/i, '')))
+    .filter((value) => Number.isFinite(value))
+    .reduce((max, value) => Math.max(max, value), 0);
+
+  return highestDifficulty || 9;
+};
+
+const getLevelsPerDifficulty = ({ levelsPerDifficulty, powerByDifficulty }) => {
+  if (Number.isInteger(levelsPerDifficulty) && levelsPerDifficulty > 0) {
+    return levelsPerDifficulty;
+  }
+
+  const highestLevel = Object.values(powerByDifficulty || {})
+    .flatMap((levels) => Object.keys(levels || {}))
+    .map((key) => Number(key.replace(/^L/i, '')))
+    .filter((value) => Number.isFinite(value))
+    .reduce((max, value) => Math.max(max, value), 0);
+
+  return highestLevel || 15;
+};
+
 const createDifficultySection = ({
   difficulty,
   levelsPerDifficulty,
@@ -94,11 +148,9 @@ fetch('data/survival-saga.json')
     return response.json();
   })
   .then((data) => {
-    const {
-      difficultyCount,
-      levelsPerDifficulty,
-      powerByDifficulty
-    } = data;
+    const powerByDifficulty = normalizePowerByDifficulty(data);
+    const difficultyCount = getDifficultyCount({ difficultyCount: data.difficultyCount, powerByDifficulty });
+    const levelsPerDifficulty = getLevelsPerDifficulty({ levelsPerDifficulty: data.levelsPerDifficulty, powerByDifficulty });
 
     sectionsContainer.innerHTML = '';
 
